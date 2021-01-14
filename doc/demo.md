@@ -14,4 +14,4 @@
 ![管理系统主要界面2](http://yujian95.cn/post/min-program-hospital-appointment/admin-2.png)
 ![管理系统主要界面3](http://yujian95.cn/post/min-program-hospital-appointment/admin-3.png)
 
-- [更多web管理系统图片](https://github.com/YuJian95/Product-Prototype/tree/master/hospital-appointment#web%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F)
+- [更多/user/card/web管理系统图片](https://github.com/YuJian95/Product-Prototype/tree/master/hospital-appointment#web%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F)

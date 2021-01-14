@@ -48,4 +48,15 @@ public class UserMedicalCardUpdateParam implements Serializable {
      */
     @ApiModelProperty(value = "性别 男：1，女：2")
     private Integer gender;
+
+    @ApiModelProperty(value = "证件号码")
+    private String identificationNumber;
+
+    /**
+     * 出生日期
+     *
+     * @mbg.generated
+     */
+    @ApiModelProperty(value = "出生日期")
+    private Date birthDate;
 }
