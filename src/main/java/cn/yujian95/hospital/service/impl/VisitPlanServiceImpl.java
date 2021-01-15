@@ -337,9 +337,9 @@ public class VisitPlanServiceImpl implements IVisitPlanService {
         TimePeriodEnum timePeriod = (plan.getTime().equals(TimePeriodEnum.AM.getTime())) ? TimePeriodEnum.AM : TimePeriodEnum.PM;
 
         for (int i = timePeriod.getStart(); i <= timePeriod.getEnd(); i++) {
-
+            System.out.println(appointmentService.countByPlanId(plan.getId(), i));
             // 设置剩余号数
-            residueList.add(MAX_OF_PATIENTS - appointmentService.countByPlanId(plan.getId(), plan.getTime()));
+            residueList.add(MAX_OF_PATIENTS - appointmentService.countByPlanId(plan.getId(), i));
         }
 
         // 设置剩余号数
