@@ -29,6 +29,15 @@ public class HospitalDoctor implements Serializable {
     @ApiModelProperty(value = "性别：1，男；2，女")
     private Integer gender;
 
+
+    /**
+     * 是否是专家号
+     *
+     * @mbg.generated
+     */
+    @ApiModelProperty(value = "是：1；否：0")
+    private Integer isExpert;
+
     /**
      * 医生职称
      *
@@ -99,6 +108,14 @@ public class HospitalDoctor implements Serializable {
         return gender;
     }
 
+    public Integer getIsExpert() {
+        return isExpert;
+    }
+
+    public void setIsExpert(Integer isExpert) {
+        this.isExpert = isExpert;
+    }
+
     public void setGender(Integer gender) {
         this.gender = gender;
     }
@@ -160,6 +177,7 @@ public class HospitalDoctor implements Serializable {
         sb.append(", id=").append(id);
         sb.append(", name=").append(name);
         sb.append(", gender=").append(gender);
+        sb.append(", isExpert=").append(isExpert);
         sb.append(", jobTitle=").append(jobTitle);
         sb.append(", specialty=").append(specialty);
         sb.append(", specialId=").append(specialId);

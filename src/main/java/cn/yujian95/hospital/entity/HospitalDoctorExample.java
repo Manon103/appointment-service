@@ -295,6 +295,66 @@ public class HospitalDoctorExample {
             return (Criteria) this;
         }
 
+        public Criteria andIsExpertIsNull() {
+            addCriterion("is_expert is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andIsExpertIsNotNull() {
+            addCriterion("is_expert is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andIsExpertEqualTo(Integer value) {
+            addCriterion("is_expert =", value, "isExpert");
+            return (Criteria) this;
+        }
+
+        public Criteria andIsExpertNotEqualTo(Integer value) {
+            addCriterion("is_expert <>", value, "isExpert");
+            return (Criteria) this;
+        }
+
+        public Criteria andIsExpertGreaterThan(Integer value) {
+            addCriterion("is_expert >", value, "isExpert");
+            return (Criteria) this;
+        }
+
+        public Criteria andIsExpertGreaterThanOrEqualTo(Integer value) {
+            addCriterion("is_expert >=", value, "isExpert");
+            return (Criteria) this;
+        }
+
+        public Criteria andIsExpertLessThan(Integer value) {
+            addCriterion("isExpert <", value, "isExpert");
+            return (Criteria) this;
+        }
+
+        public Criteria andIsExpertLessThanOrEqualTo(Integer value) {
+            addCriterion("is_expert <=", value, "isExpert");
+            return (Criteria) this;
+        }
+
+        public Criteria andIsExpertIn(List<Integer> values) {
+            addCriterion("is_expert in", values, "isExpert");
+            return (Criteria) this;
+        }
+
+        public Criteria andIsExpertNotIn(List<Integer> values) {
+            addCriterion("is_expert not in", values, "isExpert");
+            return (Criteria) this;
+        }
+
+        public Criteria andIsExpertBetween(Integer value1, Integer value2) {
+            addCriterion("is_expert between", value1, value2, "isExpert");
+            return (Criteria) this;
+        }
+
+        public Criteria andIsExpertNotBetween(Integer value1, Integer value2) {
+            addCriterion("is_expert not between", value1, value2, "isExpert");
+            return (Criteria) this;
+        }
+
         public Criteria andJobTitleIsNull() {
             addCriterion("job_title is null");
             return (Criteria) this;

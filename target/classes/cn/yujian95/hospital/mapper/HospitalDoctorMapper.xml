@@ -5,6 +5,7 @@
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="gender" jdbcType="INTEGER" property="gender" />
+    <result column="is_expert" jdbcType="INTEGER" property="isExpert" />
     <result column="job_title" jdbcType="VARCHAR" property="jobTitle" />
     <result column="specialty" jdbcType="VARCHAR" property="specialty" />
     <result column="special_id" jdbcType="BIGINT" property="specialId" />
@@ -71,7 +72,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, name, gender, job_title, specialty, special_id, outpatient_id, gmt_create, gmt_modified
+    id, name, gender, job_title, specialty, special_id, outpatient_id, gmt_create, gmt_modified, is_expert
   </sql>
   <select id="selectByExample" parameterType="cn.yujian95.hospital.entity.HospitalDoctorExample" resultMap="BaseResultMap">
     select
@@ -105,12 +106,12 @@
   </delete>
   <insert id="insert" parameterType="cn.yujian95.hospital.entity.HospitalDoctor">
     insert into hospital_doctor (id, name, gender, 
-      job_title, specialty, special_id, 
-      outpatient_id, gmt_create, gmt_modified
+      job_title, specialty, special_id,
+      outpatient_id, gmt_create, gmt_modified, is_expert
       )
     values (#{id,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, #{gender,jdbcType=INTEGER}, 
       #{jobTitle,jdbcType=VARCHAR}, #{specialty,jdbcType=VARCHAR}, #{specialId,jdbcType=BIGINT}, 
-      #{outpatientId,jdbcType=BIGINT}, #{gmtCreate,jdbcType=TIMESTAMP}, #{gmtModified,jdbcType=TIMESTAMP}
+      #{outpatientId,jdbcType=BIGINT}, #{gmtCreate,jdbcType=TIMESTAMP}, #{gmtModified,jdbcType=TIMESTAMP}, #{isExpert,jdbcType=INTEGER}
       )
   </insert>
   <insert id="insertSelective" parameterType="cn.yujian95.hospital.entity.HospitalDoctor">
@@ -124,6 +125,9 @@
       </if>
       <if test="gender != null">
         gender,
+      </if>
+      <if test="isExpert != null">
+        is_expert,
       </if>
       <if test="jobTitle != null">
         job_title,
@@ -153,6 +157,9 @@
       </if>
       <if test="gender != null">
         #{gender,jdbcType=INTEGER},
+      </if>
+      <if test="isExpert != null">
+        #{isExpert,jdbcType=INTEGER},
       </if>
       <if test="jobTitle != null">
         #{jobTitle,jdbcType=VARCHAR},
@@ -225,7 +232,8 @@
       special_id = #{record.specialId,jdbcType=BIGINT},
       outpatient_id = #{record.outpatientId,jdbcType=BIGINT},
       gmt_create = #{record.gmtCreate,jdbcType=TIMESTAMP},
-      gmt_modified = #{record.gmtModified,jdbcType=TIMESTAMP}
+      gmt_modified = #{record.gmtModified,jdbcType=TIMESTAMP},
+      is_expert = #{record.isExpert,jdbcType=INTEGER}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -238,6 +246,9 @@
       </if>
       <if test="gender != null">
         gender = #{gender,jdbcType=INTEGER},
+      </if>
+      <if test="isExpert != null">
+        is_expert = #{isExpert,jdbcType=INTEGER},
       </if>
       <if test="jobTitle != null">
         job_title = #{jobTitle,jdbcType=VARCHAR},
@@ -269,7 +280,8 @@
       special_id = #{specialId,jdbcType=BIGINT},
       outpatient_id = #{outpatientId,jdbcType=BIGINT},
       gmt_create = #{gmtCreate,jdbcType=TIMESTAMP},
-      gmt_modified = #{gmtModified,jdbcType=TIMESTAMP}
+      gmt_modified = #{gmtModified,jdbcType=TIMESTAMP},
+      is_expert = #{isExpert,jdbcType=INTEGER},
     where id = #{id,jdbcType=BIGINT}
   </update>
 </mapper>

@@ -33,6 +33,14 @@ public class HospitalDoctorParam implements Serializable {
     private Integer gender;
 
     /**
+     * 是否是专家号
+     *
+     * @mbg.generated
+     */
+    @ApiModelProperty(value = "是：1；否：0")
+    private Integer isExpert;
+
+    /**
      * 医生职称
      *
      * @mbg.generated
