@@ -6,6 +6,5 @@
 - `Spring Security + JWT` ： 实现基于角色的动态权限管理。
 - `Mybatis generator` ： 逆向生成相关实体类与配置文件，并且添加了相关 Swagger 注释。
 - `Lombok` ： 减少了冗余的 Getter / Setter 代码。
-- `Redis` ：实现二级缓存，提高响应速度。
 
 点击查看[/doc/deploy.md](doc/deploy.md)
