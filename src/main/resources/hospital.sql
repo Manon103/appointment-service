@@ -28,13 +28,13 @@ CREATE TABLE `hospital_doctor`
     `id`            bigint(20)                                                    NOT NULL AUTO_INCREMENT COMMENT '医生编号',
     `name`          varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci  NOT NULL COMMENT '医生姓名',
     `gender`        int(11)                                                       NOT NULL DEFAULT 1 COMMENT '性别：1，男；2，女',
+    `is_expert`     int(11)                                                       NOT NULL DEFAULT 0 COMMENT '专家：1，非专家；0',
     `job_title`     varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci  NOT NULL COMMENT '医生职称',
     `specialty`     varchar(512) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT '医生专长',
     `special_id`    bigint(20)                                                    NOT NULL COMMENT '所属专科',
     `outpatient_id` bigint(20)                                                    NOT NULL COMMENT '所属门诊',
     `gmt_create`    datetime(0)                                                   NOT NULL COMMENT '创建时间',
     `gmt_modified`  datetime(0)                                                   NOT NULL COMMENT '更新时间',
-    `is_expert`     int(11)                                                       NOT NULL DEFAULT 0 COMMENT '0:非专家号，1：专家号',
     PRIMARY KEY (`id`) USING BTREE,
     INDEX `hospital_doctor_hospital_outpatient_id_fk` (`outpatient_id`) USING BTREE,
     INDEX `hospital_doctor_hospital_special_id_fk` (`special_id`) USING BTREE,
@@ -563,9 +563,21 @@ INSERT INTO `hospital`.`hospital_info`(`id`, `name`, `phone`, `address`, `descri
                                        `gmt_modified`)
 VALUES (1000, '广东省中医院', '020-123452', '广州大学城', '广东省中医院', 'http://image.yujian95.cn/FmxdyLFebwrEhId3tyb7AXo5Xryc',
         '2020-02-05 13:06:55', '2020-03-16 09:57:16');
+INSERT INTO `hospital`.`hospital_info`(`id`, `name`, `phone`, `address`, `description`, `picture`, `gmt_create`,
+                                       `gmt_modified`)
+VALUES (1001, '顺德分院', '020-1234567', '广东省佛山市顺德区', '位于广东省佛山市顺德区',
+        'http://image.yujian95.cn/FmHCxgk544aFLNg5WLu9ES4gWOo1', '2020-03-16 08:00:03', '2020-03-16 08:00:03');
+INSERT INTO `hospital`.`hospital_info`(`id`, `name`, `phone`, `address`, `description`, `picture`, `gmt_create`,
+                                       `gmt_modified`)
+VALUES (1002, '白云分院', '020-1234568', '广东省广州市白云区', '位于广东省广州市白云区',
+        'http://image.yujian95.cn/Fq-bSZSpZHGC0FlvAAgOP8XDYzBE', '2020-03-16 08:03:30', '2020-03-16 08:03:30');
+INSERT INTO `hospital`.`hospital_info`(`id`, `name`, `phone`, `address`, `description`, `picture`, `gmt_create`,
+                                       `gmt_modified`)
+VALUES (1007, '越秀分院', '020-1234563', '广东省越秀区', '位于广东省越秀区', 'http://image.yujian95.cn/FmxdyLFebwrEhId3tyb7AXo5Xryc',
+        '2020-03-22 04:53:40', '2020-03-22 04:53:40');
 
 INSERT INTO `hospital`.`hospital_special`(`id`, `name`, `description`, `gmt_create`, `gmt_modified`)
-VALUES (10000, '妇科', '女性妇科相关治疗', '2020-03-20 03:54:25', '2020-03-20 03:54:25');
+VALUES (10000, '妇科', '女性妇科相关智联', '2020-03-20 03:54:25', '2020-03-20 03:54:25');
 INSERT INTO `hospital`.`hospital_special`(`id`, `name`, `description`, `gmt_create`, `gmt_modified`)
 VALUES (10006, '皮肤科', '皮肤相关治疗', '2020-03-20 04:14:07', '2020-03-20 04:14:07');
 INSERT INTO `hospital`.`hospital_special`(`id`, `name`, `description`, `gmt_create`, `gmt_modified`)

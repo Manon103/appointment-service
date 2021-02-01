@@ -34,6 +34,7 @@ CREATE TABLE `hospital_doctor`
     `outpatient_id` bigint(20)                                                    NOT NULL COMMENT '所属门诊',
     `gmt_create`    datetime(0)                                                   NOT NULL COMMENT '创建时间',
     `gmt_modified`  datetime(0)                                                   NOT NULL COMMENT '更新时间',
+    `is_expert`     int(11)                                                       NOT NULL DEFAULT 0 COMMENT '0:非专家号，1：专家号',
     PRIMARY KEY (`id`) USING BTREE,
     INDEX `hospital_doctor_hospital_outpatient_id_fk` (`outpatient_id`) USING BTREE,
     INDEX `hospital_doctor_hospital_special_id_fk` (`special_id`) USING BTREE,
@@ -564,7 +565,7 @@ VALUES (1000, '广东省中医院', '020-123452', '广州大学城', '广东省�
         '2020-02-05 13:06:55', '2020-03-16 09:57:16');
 
 INSERT INTO `hospital`.`hospital_special`(`id`, `name`, `description`, `gmt_create`, `gmt_modified`)
-VALUES (10000, '妇科', '女性妇科相关智联', '2020-03-20 03:54:25', '2020-03-20 03:54:25');
+VALUES (10000, '妇科', '女性妇科相关治疗', '2020-03-20 03:54:25', '2020-03-20 03:54:25');
 INSERT INTO `hospital`.`hospital_special`(`id`, `name`, `description`, `gmt_create`, `gmt_modified`)
 VALUES (10006, '皮肤科', '皮肤相关治疗', '2020-03-20 04:14:07', '2020-03-20 04:14:07');
 INSERT INTO `hospital`.`hospital_special`(`id`, `name`, `description`, `gmt_create`, `gmt_modified`)
