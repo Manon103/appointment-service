@@ -21,54 +21,6 @@ spring:
     password: 用户密码
 ```
 
-4. 配置 `redis`和 阿里云短信服务 
-
-修改 host 和 password
-
-```yaml
-redis:
-    # Redis服务器地址
-    host: localhost
-    # Redis数据库索引（默认为0）
-    database: 0
-    # Redis服务器连接端口
-    port: 6379
-    # Redis密码
-    password: password
-```
-
-5. 阿里云短信服务
-
-修改 accessKeyId，accessSecret，signNam，loginTemplate
-
-```yaml
-# 阿里云短信服务配置
-aliSms:
-  # 阿里云短信服务 key
-  accessKeyId: ""
-  # 阿里云短信服务 secret
-  accessSecret: ""
-  # 短信抬头
-  signName: ""
-  # 注册短信验证码模板
-  loginTemplate: "SMS_"
-  regionId: "cn-hangzhou"
-  domain: "dysmsapi.aliyuncs.com"
-  version: "2017-05-25"
-```
-
-6. 配置七牛云文件存储
-
-```yaml
-# 七牛云文件存储
-qiniu:
-  accessKey: 
-  secretKey: 
-  bucket: 存储空间名称
-  # 访问域名前缀  
-  url: http://xxx.bkt.clouddn.com/
-```
-
 7. 运行 `HospitalApplication.java`, 启动项目
 
 8. 访问 API文档，运行后，范围 http://localhost:8080/hospital/doc.html ,输入`application.yml`配置的账号密码即可
@@ -100,7 +52,6 @@ swagger:
 账号：doctor
 密码：123456
 
-// API 接口测试账号
-账号：test
-密码：test
+// 用户
+
 ```
