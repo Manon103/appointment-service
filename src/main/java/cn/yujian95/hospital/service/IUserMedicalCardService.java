@@ -32,6 +32,8 @@ public interface IUserMedicalCardService {
      */
     boolean update(Long relationId, UserMedicalCardUpdateParam param);
 
+    boolean updateCardBalance(Long id, int balance);
+
     /**
      * 删除医疗卡
      *

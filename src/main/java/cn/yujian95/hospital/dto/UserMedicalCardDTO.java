@@ -61,6 +61,14 @@ public class UserMedicalCardDTO implements Serializable {
     private Integer gender;
 
     /**
+     * 账户余额
+     *
+     * @mbg.generated
+     */
+    @ApiModelProperty(value = "账户余额")
+    private Integer balance;
+
+    /**
      * 手机号
      *
      * @mbg.generated

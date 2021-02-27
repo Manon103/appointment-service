@@ -27,4 +27,6 @@ public interface UserMedicalCardMapper {
     int updateByPrimaryKeySelective(UserMedicalCard record);
 
     int updateByPrimaryKey(UserMedicalCard record);
+
+    int updateCardBalance(@Param("id")Long id, @Param("balance")int balance);
 }

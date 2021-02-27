@@ -59,7 +59,10 @@ public class VisitAppointmentController {
         }
 
         if (appointmentService.insert(param)) {
-            return CommonResult.success();
+            System.out.println(param);
+            if(userMedicalCardService.updateCardBalance(param.getCardId(), param.getBalance())){
+                return CommonResult.success();
+            }
         }
 
         return CommonResult.failed();

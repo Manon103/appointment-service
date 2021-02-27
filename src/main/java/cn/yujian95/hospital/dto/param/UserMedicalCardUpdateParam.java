@@ -59,4 +59,12 @@ public class UserMedicalCardUpdateParam implements Serializable {
      */
     @ApiModelProperty(value = "出生日期")
     private Date birthDate;
+
+    /**
+     * 账户余额
+     *
+     * @mbg.generated
+     */
+    @ApiModelProperty(value = "账户余额")
+    private Integer balance;
 }

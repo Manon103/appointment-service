@@ -353,4 +353,9 @@ public class UserMedicalCardServiceImpl implements IUserMedicalCardService {
 
         return medicalCardMapper.insertSelective(card) > 0;
     }
+
+    @Override
+    public boolean updateCardBalance(Long cardId, int balance) {
+        return medicalCardMapper.updateCardBalance(cardId, balance) > 0;
+    }
 }

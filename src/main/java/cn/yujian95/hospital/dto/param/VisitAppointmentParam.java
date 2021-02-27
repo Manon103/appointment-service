@@ -26,6 +26,14 @@ public class VisitAppointmentParam implements Serializable {
     private Long planId;
 
     /**
+     * 账户余额
+     *
+     * @mbg.generated
+     */
+    @ApiModelProperty(value = "账户余额")
+    private Integer balance;
+
+    /**
      * 就诊卡号
      *
      * @mbg.generated

@@ -5,6 +5,7 @@
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="gender" jdbcType="INTEGER" property="gender" />
+    <result column="balance" jdbcType="INTEGER" property="balance" />
     <result column="phone" jdbcType="VARCHAR" property="phone" />
     <result column="identification_number" jdbcType="VARCHAR" property="identificationNumber" />
     <result column="birth_date" jdbcType="TIMESTAMP" property="birthDate" />
@@ -70,7 +71,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, name, gender, phone, identification_number, birth_date, gmt_create, gmt_modified
+    id, name, gender, balance, phone, identification_number, birth_date, gmt_create, gmt_modified
   </sql>
   <select id="selectByExample" parameterType="cn.yujian95.hospital.entity.UserMedicalCardExample" resultMap="BaseResultMap">
     select
@@ -253,6 +254,11 @@
       birth_date = #{birthDate,jdbcType=TIMESTAMP},
       gmt_create = #{gmtCreate,jdbcType=TIMESTAMP},
       gmt_modified = #{gmtModified,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateCardBalance">
+    update user_medical_card
+    set balance = #{balance,jdbcType=INTEGER}
     where id = #{id,jdbcType=BIGINT}
   </update>
 </mapper>

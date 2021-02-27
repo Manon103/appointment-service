@@ -30,6 +30,14 @@ public class UserMedicalCard implements Serializable {
     private Integer gender;
 
     /**
+     * 账户余额
+     *
+     * @mbg.generated
+     */
+    @ApiModelProperty(value = "账户余额")
+    private Integer balance;
+
+    /**
      * 手机号
      *
      * @mbg.generated
@@ -95,6 +103,14 @@ public class UserMedicalCard implements Serializable {
         this.gender = gender;
     }
 
+    public Integer getBalance() {
+        return balance;
+    }
+
+    public void setBalance(Integer balance) {
+        this.balance = balance;
+    }
+
     public String getPhone() {
         return phone;
     }
@@ -144,6 +160,7 @@ public class UserMedicalCard implements Serializable {
         sb.append(", id=").append(id);
         sb.append(", name=").append(name);
         sb.append(", gender=").append(gender);
+        sb.append(", balance=").append(balance);
         sb.append(", phone=").append(phone);
         sb.append(", identificationNumber=").append(identificationNumber);
         sb.append(", birthDate=").append(birthDate);

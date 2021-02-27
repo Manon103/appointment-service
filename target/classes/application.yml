@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/hospital?characterEncoding=UTF-8&useSSL=false&useUnicode=true&serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/hospital?characterEncoding=UTF-8&useSSL=false&useUnicode=true&serverTimezone=UTC&allowPublicKeyRetrieval=true
     username: root
-    password: root
+    password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
     tomcat:
       max-active: 20
@@ -44,7 +44,7 @@ mybatis:
   config-location: classpath:/config/SqlMapConfig.xml
 
 server:
-  port: 8080
+  port: 8088
   servlet:
     context-path: /hospital
 
